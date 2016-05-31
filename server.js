@@ -23,9 +23,15 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 
 var appMainController = require('./app/controllers/home.js');
 var userController = require('./app/controllers/user_controller.js');
+var eventController = require('./app/controllers/event_controller.js');
+var groupController = require('./app/controllers/group_controller.js');
+var optionController = require('./app/controllers/option_controller.js');
 
 appMainController(app);
 userController(app);
+eventController(app);
+groupController(app);
+optionController(app);
 
 // listen (start app with node server.js) ======================================
 app.listen(port);
